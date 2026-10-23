@@ -1,0 +1,57 @@
+{
+"version": "2.0.0",
+"tasks": [
+    {
+        "label": "Run Debug",
+        "type": "shell",
+        "command": "dotnet serve --mime .wasm=application/wasm --mime .js=text/javascript --mime .json=application/json --directory bin/Debug/net10.0/browser-wasm/AppBundle/",
+        "options": {
+            "cwd": "${workspaceFolder}/CodeBase/RaylibWasm"
+        },
+        "problemMatcher": [],
+        "group": {
+            "kind": "build",
+            "isDefault": true
+        }
+    },
+    // {
+    //     "label": "Run Release",
+    //     "type": "shell",
+    //     "command": "dotnet serve --mime .wasm=application/wasm --mime .js=text/javascript --mime .json=application/json --directory bin/Release/net10.0/browser-wasm/AppBundle/",
+    //     "options": {
+    //         "cwd": "${workspaceFolder}/CodeBase/RaylibWasm"
+    //     },
+    //     "problemMatcher": [],
+    //     "group": {
+    //         "kind": "build",
+    //         "isDefault": true
+    //     }
+    // },
+    {
+        "label": "Build Debug",
+        "type": "shell",
+        "command": "dotnet publish -c Debug -p:RunAOTCompilation=false",
+        "options": {
+            "cwd": "${workspaceFolder}/CodeBase/RaylibWasm"
+        },
+        "problemMatcher": [],
+        "group": {
+            "kind": "build",
+            "isDefault": true
+        }
+    },
+    // {
+    //     "label": "Build Release",
+    //     "type": "shell",
+    //     "command": "dotnet publish -c Release",
+    //     "options": {
+    //         "cwd": "${workspaceFolder}/CodeBase/RaylibWasm"
+    //     },
+    //     "problemMatcher": [],
+    //     "group": {
+    //         "kind": "build",
+    //         "isDefault": true
+    //     }
+    // },
+  ]
+}
