@@ -1,0 +1,10 @@
+namespace RayGUI;
+
+public enum GuiListViewProperty { 
+    LIST_ITEMS_HEIGHT = 16, 
+    LIST_ITEMS_SPACING, 
+    SCROLLBAR_WIDTH, 
+    SCROLLBAR_SIDE, 
+    LIST_ITEMS_BORDER_NORMAL, 
+    LIST_ITEMS_BORDER_WIDTH 
+}
